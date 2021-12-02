@@ -1,0 +1,1 @@
+# otus_cpp_03_vect_editor
