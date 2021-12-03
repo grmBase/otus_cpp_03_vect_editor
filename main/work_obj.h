@@ -11,6 +11,9 @@ class t_canvas;
 //---------------------------------------------------------------------------
 
 
+/*!
+    Class combination of engine, document and reference to GUI canvas
+*/
 class t_work_obj
 {
   public:
