@@ -22,12 +22,12 @@ class t_rect : public i_item
 
   private:
 
-    double m_dbl_x = 0;
-    double m_dbl_y = 0;
-    double m_dbl_width = 20;
-    double m_dbl_height = 10;
+    [[maybe_unused]]double m_dbl_x = 0;
+    [[maybe_unused]]double m_dbl_y = 0;
+    [[maybe_unused]]double m_dbl_width = 20;
+    [[maybe_unused]]double m_dbl_height = 10;
 
-    t_canvas* m_p_canvas;
+    [[maybe_unused]]t_canvas* m_p_canvas;
 
 };
 

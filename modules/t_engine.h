@@ -53,17 +53,18 @@ class t_engine
   private:
 
     // viewport - то что сейчас видим. Для всякого зумирования, скрола
-    double m_dbl_left = 0;
-    double m_dbl_top = 0;
-    double m_dbl_width = 0;
-    double m_dbl_height = 0;
+    [[maybe_unused]]double m_dbl_left = 0;
+    [[maybe_unused]]double m_dbl_top = 0;
+    [[maybe_unused]]double m_dbl_width = 0;
+    [[maybe_unused]]double m_dbl_height = 0;
 
     // коэффициент пересчёта координат документа в экранные. Возможно может быть
     // разным для x & y, но для простого примера и так будет норм
-    double m_dbl_ratio = 1;
+    [[maybe_unused]]double m_dbl_ratio = 1;
 
     // список элементов расположенных на документе
-    std::vector<std::unique_ptr<t_gr_elem>> m_vec_elems;
+    //std::vector<t_gr_elem> m_vec_elems;
+    std::vector<std::unique_ptr<i_item>> m_vec_elems;
 
     // Канва основного GUI документа, на которой рисуем
     // скорее всего не влаедеем ею, т.к. "окно" скорее всего будут удалять после

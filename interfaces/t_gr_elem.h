@@ -17,6 +17,9 @@ class t_gr_elem
 {
   public:
 
+    t_gr_elem(i_item* apItem)
+      :msp_final_figure(apItem) {};
+
     t_gr_elem(double adbl_left, double adbl_top, double adbl_width, double adbl_height);
 
   

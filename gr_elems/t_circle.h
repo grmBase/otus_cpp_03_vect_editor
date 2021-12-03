@@ -25,11 +25,11 @@ class t_circle : public i_item
 
   private:
 
-    double m_dbl_x;
-    double m_dbl_y;
-    double m_dbl_radius;
+    [[maybe_unused]]double m_dbl_x;
+    [[maybe_unused]]double m_dbl_y;
+    [[maybe_unused]]double m_dbl_radius;
 
-    t_canvas* m_p_canvas;
+    [[maybe_unused]]t_canvas* m_p_canvas;
 
 };
 

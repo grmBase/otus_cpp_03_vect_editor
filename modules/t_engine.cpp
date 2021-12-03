@@ -1,27 +1,39 @@
-
+#include <vector>
 
 #include "modules/t_engine.h"
+#include "interfaces/t_factory.h"
 
 
 
 // Запрос добавить элемент из меню, тулбара, по шорткату:
 void tst::t_engine::on_click_add_elem(const std::string& a_str_elem_type)
 {
-  
+  tst::i_item* pObject = m_p_factory->create(a_str_elem_type, m_p_canvas);
+
+  //t_gr_elem tmp(pObject);
+
+  std::unique_ptr<tst::i_item> tmp{ pObject };
+  m_vec_elems.push_back(std::move(tmp));
+
 };
 
 // запрос на удалить элемент на который сейчас указывает мышка
-void tst::t_engine::on_click_del(int an_x_pos, int an_y_pos)
+void tst::t_engine::on_click_del([[maybe_unused]]int an_x_pos, [[maybe_unused]]int an_y_pos)
 {
+  // here we should find somehow which elem is pointed by mouse.
+
+  m_vec_elems.erase(m_vec_elems.begin() + 33);
 };
 
 // запрос на сохранение текущего документа в файл
-int tst::t_engine::save_to_file(const std::string& a_str_file_name)
+int tst::t_engine::save_to_file([[maybe_unused]] const std::string& a_str_file_name)
 {
 
   std::string str_stream;
 
-  for(auto& curr_elem : m_vec_elems) {
+  for([[maybe_unused]]auto& curr_elem : m_vec_elems) {
+
+
 
     /* ... getting final type of elem (rtty or use own virt function in i_item.h)
 
@@ -42,8 +54,9 @@ int tst::t_engine::save_to_file(const std::string& a_str_file_name)
 };
 
 // запрос на зачитывание документа с диска. Сначал очищает всё, потом загружает
-int tst::t_engine::load_from_file(const std::string& a_str_file_name)
+int tst::t_engine::load_from_file([[maybe_unused]]const std::string& a_str_file_name)
 {
+
 
   // all should be clear before load
   clear();
@@ -54,7 +67,7 @@ int tst::t_engine::load_from_file(const std::string& a_str_file_name)
   */
 
   std::string str_stream;
-  size_t un_file_size; // got after reading whold content of file
+  size_t un_file_size = 33; // got after reading whold content of file
 
   size_t un_position = 0;
 
