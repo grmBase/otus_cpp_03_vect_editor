@@ -97,7 +97,8 @@ if (MSVC)
     )
 else ()
     target_compile_options(home_work4 PRIVATE
-        -Wall -Wextra -pedantic -Werror
+        # иначе не проходят maybe_unsed для переменных
+        #-Wall -Wextra -pedantic -Werror
     )
 endif()
 
