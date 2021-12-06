@@ -7,5 +7,5 @@ var searchData=
   ['on_5fload_5ffrom_5ffile_4',['on_load_from_file',['../classt__work__obj.html#ad2a28c65f78efe3d26849c8c2a69ad55',1,'t_work_obj']]],
   ['on_5frepaint_5',['on_repaint',['../classtst_1_1t__engine.html#ad6e57e373112f766080a97d8d72fc158',1,'tst::t_engine']]],
   ['on_5fsave_5fto_5ffile_6',['on_save_to_file',['../classt__work__obj.html#af4ce447ba5a0648c6ab7132cce11fa3d',1,'t_work_obj']]],
-  ['otus_5fcpp_5f03_5fvect_5feditor_7',['otus_cpp_03_vect_editor',['../md_README.html',1,'']]]
+  ['otus_5fcpp_5f04_5fvect_5feditor_7',['otus_cpp_04_vect_editor',['../md_README.html',1,'']]]
 ];
