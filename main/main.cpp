@@ -1,6 +1,9 @@
+//---------------------------------------------------------------------------
 #include <iostream>
-
+//---------------------------------------------------------------------------
 #include "main/work_obj.h"
+//---------------------------------------------------------------------------
+
 
 // some canvas is usually provided for GUI application
 class t_canvas;
@@ -11,13 +14,11 @@ int main(int, const char* [])
 {
 
   t_canvas* ap_canvas = nullptr;  // in reality it should not be nullptr for sure
-  
 
   t_work_obj workObj(ap_canvas);
 
   try 
   {
-
     // here some gui loop with handlers
 
     int nEventCode = 0;
@@ -46,7 +47,6 @@ int main(int, const char* [])
       workObj.on_save_to_file();
     }
     break;
-
 
     }
     // sometimes some requests are happens to us:

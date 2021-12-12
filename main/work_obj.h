@@ -19,7 +19,8 @@ class t_work_obj
   public:
 
     t_work_obj(t_canvas* ap_canvas)
-      :m_sp_factory(new tst::t_factory()),
+      :mp_canvas(ap_canvas),
+      m_sp_factory(new tst::t_factory()),
       m_sp_engine(new tst::t_engine(ap_canvas, m_sp_factory.get()))
     { 
     }
@@ -31,8 +32,16 @@ class t_work_obj
     void on_save_to_file();
 
   private:
+
+    // фабрика всяких делегаторов, подгружаемых объектов. Она будет
+    // едина для любого числа открытых документов
     std::unique_ptr<tst::t_factory> m_sp_factory;
+
+    // Движок или "один загруженный документ". Редактор будет у нас с возможностью подгрузить только один документ
     std::unique_ptr<tst::t_engine> m_sp_engine;
+
+    // где всё рисуем
+    t_canvas* mp_canvas;
 
 };
 //---------------------------------------------------------------------------

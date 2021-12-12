@@ -1,7 +1,8 @@
 //---------------------------------------------------------------------------
 #pragma once
 //---------------------------------------------------------------------------
-#include "interfaces/i_item.h"
+#include "interfaces/i_item.h"     // наследуемся
+#include "interfaces/i_marshal.h"  // наследуемся
 //---------------------------------------------------------------------------
 class t_canvas;
 //---------------------------------------------------------------------------
@@ -11,8 +12,11 @@ namespace tst
 {
 
 
-class t_circle : public i_item
+class t_circle : 
+  public i_item,
+  public i_marshal
 {
+
   public:
 
     t_circle(t_canvas* ap_canvas)
@@ -22,6 +26,31 @@ class t_circle : public i_item
       m_p_canvas(ap_canvas)
     {
     };
+
+
+
+    // сохраняем объект в поток:
+    void save_to_stream(/*здесь какой-то поток. Бинарный, json...*/) const
+    {
+      /*
+         stream.put(m_dbl_x);
+         stream.put(m_dbl_y);
+         ....
+      */
+    };
+
+    // загружаем объект из потока
+    void load_from_stream(/*здесь какой-то поток. Бинарный, json...*/)
+    {
+      /*
+         m_dbl_x = stream.get();
+         m_dbl_y = stream.get();
+         ....
+      */
+    };
+
+
+
 
   private:
 
