@@ -1,4 +1,5 @@
 <map id="tst::t_circle" name="tst::t_circle">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,91,107"/>
-<area shape="rect" id="node2" href="$classtst_1_1i__item.html" title=" " alt="" coords="9,5,87,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="58,80,143,107"/>
+<area shape="rect" id="node2" href="$classtst_1_1i__item.html" title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node3" href="$classtst_1_1i__marshal.html" title=" " alt="" coords="109,5,207,32"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="tst::t_rect" name="tst::t_rect">
-<area shape="rect" id="node1" title=" " alt="" coords="7,80,83,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="63,80,139,107"/>
 <area shape="rect" id="node2" href="$classtst_1_1i__item.html" title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node3" href="$classtst_1_1i__marshal.html" title=" " alt="" coords="109,5,207,32"/>
 </map>
